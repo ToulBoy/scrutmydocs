@@ -39,7 +39,8 @@
 		<elasticsearch.version>0.20.5</elasticsearch.version>
 		<spring.elasticsearch.version>0.0.2</spring.elasticsearch.version>
 		<fsriver.version>0.0.3</fsriver.version>
-		<jackson.version>1.7.1</jackson.version>
+        <dropbox.version>0.1.0</dropbox.version>
+        <jackson.version>1.7.1</jackson.version>
 		<guava.version>12.0.1</guava.version>
 		<commons.file-upload.version>1.2</commons.file-upload.version>
 		<log4j.version>1.2.13</log4j.version>
@@ -150,7 +151,12 @@
 			<artifactId>fsriver</artifactId>
 			<version>${fsriver.version}</version>
 		</dependency>
-		
+        <dependency>
+            <groupId>fr.pilato.elasticsearch.river</groupId>
+            <artifactId>dropbox</artifactId>
+            <version>${dropbox.version}</version>
+        </dependency>
+
 		<!-- Standard dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
