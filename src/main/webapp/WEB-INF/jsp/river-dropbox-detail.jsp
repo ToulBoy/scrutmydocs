@@ -44,6 +44,20 @@
                         <span class="help-inline"></span>
                     </div>
                 </div>
+                <div class="control-group">
+                    <label class="control-label" for="river-dropbox-token">Token</label>
+                    <div class="controls">
+                        <input class="input" id="river-dropbox-token" type="text" placeholder="eg. XvxggXVHhGDHJ"/>
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="river-dropbox-secret">Secret</label>
+                    <div class="controls">
+                        <input class="input" id="river-dropbox-secret" type="text" placeholder="eg. dhsghdsgsdhjgj"/>
+                        <span class="help-inline"></span>
+                    </div>
+                </div>
             </fieldset>
             <%-- Advanced --%>
             <fieldset class="span6">

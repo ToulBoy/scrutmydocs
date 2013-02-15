@@ -17,7 +17,9 @@ var addDropBoxRiver = function() {
 		updateRate: 60,
 		indexname: "docs",
 		typename: "doc",
-		analyzer: "standard"
+		analyzer: "standard",
+        token: "",
+        secret: ""
 	});
 
 	$("#river-dropbox-form input").blur(function(event) {
@@ -146,6 +148,8 @@ var showDropBoxRiver = function(dropboxriver) {
 	$("#river-dropbox-name").val(dropboxriver.name);
 	$("#river-dropbox-path").val(dropboxriver.url);
 	$("#river-dropbox-rates").val(dropboxriver.updateRate);
+    $("#river-dropbox-token").val(dropboxriver.token);
+    $("#river-dropbox-secret").val(dropboxriver.secret);
 
 	$("#river-dropbox-index").val(dropboxriver.indexname);
 	$("#river-dropbox-type").val(dropboxriver.typename);
@@ -166,6 +170,8 @@ var getDropBoxRiver = function() {
 		name: $("#river-dropbox-name").val(),
 		url: $("#river-dropbox-path").val(),
 		updateRate: $("#river-dropbox-rates").val(),
+        token: $("#river-dropbox-token").val(),
+        secret: $("#river-dropbox-secret").val(),
 		indexname: $("#river-dropbox-index").val(),
 		typename: $("#river-dropbox-type").val(),
 		analyzer: $("#river-dropbox-analyser").val(),
@@ -203,7 +209,7 @@ var doCreateDropBoxRiver = function(e) {
 		showNotices([{
 			type: "alert-success",
 			title: data.name + " created",
-			message : "The file system river '"+data.name+"' have been created."
+			message : "The dropbox river '"+data.name+"' have been created."
 		}]);
 	});
 
@@ -229,7 +235,7 @@ var doDeleteDropBoxRiver = function(e) {
 			showNotices([{
 				type: "alert-danger",
 				title: data.name + " deleted",
-				message : "The file system river '"+data.name+"' have been deleted."
+				message : "The dropbox river '"+data.name+"' have been deleted."
 			}]);
 		}
 	});
@@ -260,7 +266,7 @@ var doUpdateDropBoxRiver = function(e) {
 		showNotices([{
 			type: "alert-info",
 			title: data.name + " updated",
-			message : "The file system river '"+data.name+"' have been updated."
+			message : "The dropbox river '"+data.name+"' have been updated."
 		}]);
 	});
 
@@ -287,7 +293,7 @@ var doStartDropBoxRiver = function(e) {
 		showNotices([{
 			type: "alert-success",
 			title: data.name + " started",
-			message : "The file system river '"+data.name+"' have been started."
+			message : "The dropbox river '"+data.name+"' have been started."
 		}]);
 	});
 	
@@ -314,7 +320,7 @@ var doStopDropBoxRiver = function(e) {
 		showNotices([{
 			type: "alert-danger",
 			title: data.name + " stopped",
-			message : "The file system river '"+data.name+"' have been stopped."
+			message : "The dropbox river '"+data.name+"' have been stopped."
 		}]);
 	});
 	
